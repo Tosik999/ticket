@@ -1,34 +1,13 @@
-from flask import Flask, jsonify, request
-import os
-import socket
-import requests
-from bs4 import BeautifulSoup
-
+from flask import Flask, request
 
 app = Flask(__name__)
 
-
-
-
-
-@app.route('/')
-def index():
-    return '<h1>q</h1>'
-
-
-@app.route('/ticket')
-def ticket():
-    date = request.args.get('date')
-    route = request.args.get('route')
-    passengers = request.args.get('passengers')
-    
-   
-    return date, route, passengers
-    
-
-
-
-
+@app.route('/endpoint', methods=['GET'])
+def handle_request():
+    param1 = request.args.get('date')
+    param2 = request.args.get('passengers')
+    param3 = request.args.get('route')
+    return [param1,param2,param3]
 
 if __name__ == '__main__':
-    app.run(debug=True, port=os.getenv("PORT", default=5000))
+    app.run()
