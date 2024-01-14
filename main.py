@@ -13,9 +13,14 @@ def index():
 
 @app.route('/ticket')
 def ticket():
-    date = request.args.get('date')
-    route = request.args.get('route')
-    return date, route
+    language = request.args.get('language')
+
+    # if key doesn't exist, returns a 400, bad request error
+    framework = request.args['framework']
+
+    # if key doesn't exist, returns None
+    website = request.args.get('website')
+    return language, framework, website
     
 
 
