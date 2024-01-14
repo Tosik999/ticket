@@ -77,7 +77,7 @@ def handle_request():
     param1 = request.args.get('date')
     param2 = request.args.get('passengers')
     param3 = request.args.get('route')
-    return connect_site(param1, param2, param3)
+    return connect_site(param1, param3, param2)
 
 if __name__ == '__main__':
     app.run()
