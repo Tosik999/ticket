@@ -11,9 +11,13 @@ def ticket():
     server_address = ("https://flask-production-eeed.up.railway.app/ticket", 5000)
     server_socket.bind(server_address)
     server_socket.listen(1)
+    
+    while True:
+    # Ждем подключений
+        client_socket, client_address = server_socket.accept()
 
-    response = "Привет от сервера!"
-    client_socket.send(response.encode())
+        response = "Привет от сервера!"
+        client_socket.send(response.encode())
 
 
 
