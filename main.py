@@ -11,9 +11,8 @@ def index():
     return '<h1>q</h1>'
 
 
-@app.route('/ticket', methods=['POST'])
+@app.route('/ticket')
 def ticket():
-    language = request.args.get('language')
 
    
     return 'd'
