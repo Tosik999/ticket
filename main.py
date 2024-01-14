@@ -80,13 +80,12 @@ def index():
     return '<h1>q</h1>'
 
 
-@app.route('/ticket')
+@app.route('/ticket', methods=['POST'])
 def ticket():
     date = request.args.get('date')
-    route = request.args.get('route')
-    passengers = request.args.get('passengers')
+    
    
-    return connect_site(date, route, passengers)
+    return date
     
 
 
