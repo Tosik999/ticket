@@ -1,7 +1,7 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 import os
 import socket
-import requests
+
 
 app = Flask(__name__)
 
