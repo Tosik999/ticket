@@ -16,7 +16,7 @@ def ticket():
     language = request.args.get('language')
 
    
-    return language
+    return 'd'
     
 
 
