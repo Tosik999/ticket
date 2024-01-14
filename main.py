@@ -15,7 +15,6 @@ def index():
 def ticket():
     language = request.args.get('language')
 
-    # if key doesn't exist, returns a 400, bad request error
    
     return language
     
