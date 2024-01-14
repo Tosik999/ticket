@@ -19,6 +19,7 @@ def connect_site(date, route, passengers=1):
     if html.status_code == 200:
         return(parse_tickets(html))
     else:
+        print(url)
         return 'Ошибка подключения'
 
 def parse_tickets(response):
