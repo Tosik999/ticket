@@ -12,8 +12,9 @@ def index():
 
 @app.route('/ticket')
 def ticket():
-    a = 'eeeeeeeeea'
-    return a
+    date = request.args.get('date')
+    route = request.args.get('route')
+    return date, route
     
 
 
