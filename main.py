@@ -16,7 +16,7 @@ def index():
     return '<h1>q</h1>'
 
 
-@app.route('/ticket', methods=['POST'])
+@app.route('/ticket')
 def ticket():
     date = request.args.get('date')
     
