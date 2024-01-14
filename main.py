@@ -7,7 +7,7 @@ def handle_request():
     param1 = request.args.get('date')
     param2 = request.args.get('passengers')
     param3 = request.args.get('route')
-    return [param1, param2, param3]
+    return 's'
 
 if __name__ == '__main__':
     app.run()
