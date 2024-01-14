@@ -13,9 +13,9 @@ def index():
 
 @app.route('/ticket')
 def ticket():
-
+    language = request.args.get('language'
    
-    return 'd'
+    return language
     
 
 
