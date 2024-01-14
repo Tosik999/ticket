@@ -5,6 +5,11 @@ import socket
 app = Flask(__name__)
 
 
+@app.route('/')
+def index():
+    return '<h1>q</h1>'
+
+
 @app.route('/ticket')
 def ticket():
     return '<h1>d</h1>'
