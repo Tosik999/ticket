@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 @app.route('/endpoint', methods=['GET'])
 def handle_request():
+    print(request.args)
     param1 = request.args.get('date')
     param2 = request.args.get('passengers')
     param3 = request.args.get('route')
