@@ -12,7 +12,8 @@ def index():
 
 @app.route('/ticket')
 def ticket():
-    return '<h1>d</h1>'
+    a = 'eeeeeeeeea'
+    return a
     
 
 
