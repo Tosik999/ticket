@@ -11,16 +11,13 @@ def index():
     return '<h1>q</h1>'
 
 
-@app.route('/ticket')
+@app.route('/ticket', methods=['POST'])
 def ticket():
     language = request.args.get('language')
 
     # if key doesn't exist, returns a 400, bad request error
-    framework = request.args['framework']
-
-    # if key doesn't exist, returns None
-    website = request.args.get('website')
-    return language, framework, website
+   
+    return language
     
 
 
