@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/ticket')
 def ticket():
-    return <h1>d</h1>
+    return '<h1>d</h1>'
     
 
 
