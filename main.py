@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import requests
 from bs4 import BeautifulSoup
 
@@ -77,7 +77,7 @@ def handle_request():
     param1 = request.args.get('date')
     param2 = request.args.get('passengers')
     param3 = request.args.get('route')
-    return str(connect_site(param1, param3, param2))
+    return jsonify(connect_site(param1, param3, param2))
 
 if __name__ == '__main__':
     app.run()
